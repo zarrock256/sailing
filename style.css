@@ -1,0 +1,281 @@
+body
+{
+    
+    font-family: 'Piazzolla', serif;
+    background-color:rgb(255, 255, 255);
+    margin: 0
+}
+
+#container
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#content
+{
+    width: 60%;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    background-color: #d8d4d4;
+    height: auto;
+}
+
+
+#content_title
+{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700px;
+    width: 62%;
+    padding-top: 5px;
+}
+
+:visited
+{
+    text-decoration: none;
+    color: white;
+}
+:link
+{
+    text-decoration: none;
+    color: white;
+}
+
+.photo
+{
+    width: 40%;
+    float: left;
+}
+
+.content_text
+{
+    float: left;
+    margin-left: 2%;
+    width: 57%;
+    background-color: #d8d4d4;
+}
+#main_title
+{
+    text-shadow: 1px 1px 1px #060041;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    font-weight: 400;
+    font-size: 55px;
+    color: #060041;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    text-align: left;
+    background-image: url("tlo.jpg");
+    background-size: 1000px;
+}
+
+#footer
+{
+    background-color: #060041;
+    color: white;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+
+#menu
+{
+    height: 36px;
+    text-align: center;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    margin-top: 10px;
+    top: 0px;
+    background-color:#0d71a0;
+    border-top: 3px solid #060041;
+    border-bottom: 3px solid #060041;
+    width: 100%;
+}
+
+ol
+{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 18px;
+    line-height: 200%;
+    display: inline-block;
+}
+
+ol a
+{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    
+}
+
+ ol > li
+{
+    padding: 0 0 0 0;
+    width: 24.9%;
+    border-right: 1px dotted #060041;
+    float: left;
+} 
+
+ol > li:last-child
+{
+   border-right: none;
+}
+
+ol > li:hover
+{
+    background-color:  #060041;
+}
+
+ol > li:hover > a
+{
+    font-weight: 700;
+    color: white;
+}
+
+ol > li:first-child
+{
+    border-left: 1px dotted #060041;
+}
+
+ol > li > ul
+{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: none;
+    z-index: 100;
+}
+
+ol > li:hover > ul
+{
+    display: block;
+}
+
+ol > li > ul > li
+{
+    border-top: 1px dotted #060041;
+    background-color:  #0d71a0;
+    z-index: 100;
+}
+ol > li > ul > li > a:hover
+{
+    color:white;
+    font-weight: 700;
+}
+ol > li > ul > li:hover
+{
+   background-color: #060041;
+   font-weight: 700;
+}
+
+label
+{   
+    margin-left: 17%;
+    width: 40px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    display: none;
+    border-radius: 10%;
+    border: solid 1px rgb(27, 16, 59);
+}
+
+.space
+{
+    margin-bottom: 25px; 
+    clear: both; 
+    height: 15px; 
+    width: 90%; 
+    border-bottom: 1px solid #060041;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+label:hover
+{
+    background-color: #060041;
+    border: solid 1px rgb(11, 12, 65);
+    cursor: pointer;
+}
+
+#toggle
+{
+    display: none;
+}
+
+@media only screen and (max-width: 1136px){
+    .photo{
+        width: 100%;
+    }
+
+    .content_text{
+        clear: both;
+        width: 99%;
+        
+    }
+}
+
+@media only screen and (max-width: 1005px){
+    label{
+        display: block;
+    }
+    ol a{
+        display: none;
+    }
+
+    
+    #toggle:checked + ol a
+    {
+        background-color:#0d71a0;
+        border: dotted 1px #060041;
+        clear: both;
+        width: 300px;
+        display: block;
+    }
+
+    #toggle:checked + ol > li
+    {
+        width: 0;
+        clear: both;
+    }
+
+    #toggle:checked + ol > li:first-child
+    {
+        border-left: none;
+    }
+
+    #toggle:checked + ol > li > a:hover
+    {
+        background-color: #060041;
+    }
+
+    #toggle:checked + ol > li > ul > li
+    {
+        border-top: none;
+    }
+   
+    #toggle:checked + ol > li > ul > li > a
+    {
+        background-color: #3297c5;
+        float: left;
+    }
+    #toggle:checked + ol > li > ul > li >a:hover
+    {
+        background-color: #060041;
+    }
+}
+
